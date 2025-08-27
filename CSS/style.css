@@ -1,0 +1,298 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background:#232323;
+  padding: 10px 20px;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  font-weight: bold;       
+  padding: 8px 12px;
+  transition: 0.3s;
+}
+
+.navbar a:hover {
+  color: #e8e421;       
+}
+
+.navbar a.active {
+  color: #e8e421;          
+}
+
+/* Home */
+.home {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  text-align: left;
+}
+
+.banner {
+  background: url("../img/banner1.png") no-repeat center center;
+  background-size: cover;
+  width: 100%;
+  height: 378px;
+  margin-top: 20px;
+  border-radius: 8px;   
+}
+
+/* Profile (About, Visi Misi) */
+.profile {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 50px 20px;
+}
+
+#profile {
+  background: linear-gradient(to right, #edfbcf, #f6ede2, #fdddfd);
+  padding: 50px 20px;
+}
+
+/* About */
+.about-container {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  margin-bottom: 60px;
+}
+
+.about-text {
+  flex: 1;
+  text-align: left;
+}
+
+.about-text h1 {
+  font-size: 28px;
+  margin-bottom: 15px;
+}
+
+.about-text p {
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+.about-image {
+  flex: 1;
+}
+
+.about-image img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+/* Visi Misi */
+.visi-misi {
+  display: flex;
+  justify-content: space-around;
+  gap: 30px;
+  text-align: center;
+}
+
+.visi-misi .item {
+  flex: 1;
+  padding: 20px;
+}
+
+.visi-misi .icon {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto 15px;
+  border-radius: 50%;
+  background: #e8e421;  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 40px;
+  color: white;
+}
+
+.visi-misi h1 {
+  margin-bottom: 10px;
+}
+
+
+/* Contact */
+.contact {
+  padding: 30px;
+}
+
+.contact-container {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+}
+
+form {
+  flex: 1;
+}
+
+form label {
+  display: inline-block;
+  width: 120px; 
+  margin-bottom: 10px;
+}
+
+form input[type="text"],
+form input[type="date"],
+form textarea {
+  width: 300px;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #999;
+  border-radius: 4px;
+}
+
+form input[type="radio"] {
+  margin-left: 10px;
+  margin-right: 5px;
+}
+
+form textarea {
+  width: 300px;
+  height: 100px;
+  resize: none;
+  padding: 8px;
+  border: 1px solid #999;
+  border-radius: 4px;
+  display: inline-block; 
+  vertical-align: top;   
+}
+
+form button {
+  width: 430px;
+  padding: 10px;
+  border: 1px solid #999;
+  border-radius: 5px;
+  background: #eee;
+  cursor: pointer;
+}
+
+form button:hover {
+  background: #ddd;
+}
+
+.result-box {
+  flex: 1;
+  border: 1px solid #000;
+  padding: 15px;
+  min-height: 200px;
+}
+
+footer {
+  text-align: right;     
+  padding: 10px 30px;
+  background:#232323;        
+  font-weight: bold;
+  color: #ffffff;
+}
+
+
+#backToTop {
+  display: none;        
+  position: fixed;
+  bottom: 30px;           
+  right: 30px;           
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: #f3e43e; 
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+  padding: 12px 15px;
+  border-radius: 50%;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+  transition: background 0.1s;
+}
+
+#backToTop:hover {
+  background-color: #dfe22b; 
+}
+
+
+/* ========================= */
+/* RESPONSIVE DESIGN (Mobile & Tablet) */
+/* ========================= */
+
+/* Untuk tablet & HP (lebar max 768px) */
+@media (max-width: 768px) {
+  /* Navbar */
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar ul {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  /* About Section */
+  .about-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-text, .about-image {
+    width: 100%;
+  }
+
+  /* Visi Misi */
+  .visi-misi {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  /* Contact Form */
+  .contact-container {
+    flex-direction: column;
+  }
+
+  form label {
+    width: 100%;
+    margin-bottom: 5px;
+  }
+
+  form input[type="text"],
+  form input[type="date"],
+  form textarea,
+  form button {
+    width: 100%;
+  }
+
+  .result-box {
+    margin-top: 20px;
+    width: 100%;
+  }
+}
+
+/* Untuk HP kecil (lebar max 480px) */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 22px;
+  }
+
+  .navbar {
+    padding: 10px;
+  }
+
+  .banner {
+    height: 200px;
+  }
+}

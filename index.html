@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Website</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <img src="img/Logo_revou.png" alt="Logo Perusahaan" width="50">
+      </div>
+
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#profile">Our Profile</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#contact">Message Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+<!-- Home -->
+<section id="home" class="home">
+  <h1 id="welcome">Hi Ruth, Welcome To Website</h1>
+  <p>Ini adalah website latihan pertama</p>
+  
+  <div class="banner"></div>
+</section>
+
+  <!-- Our Profile -->
+<section id="profile" class="profile">
+  <div class="about-container">
+    <div class="about-text">
+      <h1>Tentang Kami</h1>
+      <p>RevoU merupakan Akademi Pembelajaran online yang diciptakan untuk mengembangkan karir dan membekali siswa dengan keterampilan dan pendidikan
+        yang dibutuhkan pada era new digital economy. RevoU mendidik dan melatih siswa yang ingin masuk atau bekerja di industri teknologi dan menghubungkan 
+        mereka dengan instruktur dari perusahaan teknologi terkemuka di Asia Tenggara.
+      </p>
+      
+    </div>
+    <div class="about-image">
+      <img src="img/banner.png" alt="Tentang Kami">
+    </div>
+  </div>
+
+  <h1>Visi & Misi</h1>
+  <div class="visi-misi">
+    <div class="item">
+      <div class="icon">❤️</div>
+      <h3>Visi</h3>
+      <p>
+        Memberdayakan setiap individu yang memiliki ambisi tinggi untuk memperoleh 
+        keterampilan yang diperlukan dalam dunia industri saat ini.
+      </p>
+    </div>
+    <div class="item">
+      <div class="icon">🤝</div>
+      <h3>Misi</h3>
+      <p>
+        Membekali para murid dengan skills yang benar-benar dibutuhkan industri teknologi Indonesia saat ini.
+      </p>
+    </div>
+</section>
+
+
+  <!-- Message Us -->
+  <section id="contact" class="contact">
+    <h1>Message Us</h1>
+    <div class="contact-container">
+      <form id="messageForm">
+        <label>Nama:</label>
+        <input type="text" id="name" required><br>
+
+        <label>Tanggal Lahir:</label>
+        <input type="date" id="birthdate" required><br>
+
+        <label>Jenis Kelamin:</label>
+        <input type="radio" name="gender" value="Laki-Laki" required> Laki-Laki
+        <input type="radio" name="gender" value="Perempuan" required> Perempuan <br>
+
+        <label>Pesan:</label>
+        <textarea id="message" required></textarea><br>
+
+        <button type="submit">Submit</button>
+      </form>
+
+      <div id="result" class="result-box">
+        <!-- Hasil form akan tampil di sini -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Tombol Back to Top -->
+<button onclick="scrollToTop()" id="backToTop" title="Go to top">↑</button>
+
+<script>
+// tampilkan tombol ketika scroll ke bawah
+window.onscroll = function() {
+  let btn = document.getElementById("backToTop");
+  if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+    btn.style.display = "block";
+  } else {
+    btn.style.display = "none";
+  }
+};
+
+// fungsi scroll ke atas
+function scrollToTop() {
+  window.scrollTo({top: 0, behavior: 'smooth'});
+}
+</script>
+
+  <footer>
+    <p>Created by Ruth Tika Sarwanti</p>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
